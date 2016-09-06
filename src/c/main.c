@@ -5,10 +5,8 @@ static Window *s_main_window;
 
 static TextLayer *s_time_layer;
 static TextLayer *s_group_layer;
-static TextLayer *s_big_layer;
 
 static GFont s_time_font;
-static GFont s_big_font;
 static GFont s_group_font;
 
 static GBitmap *s_digit;
@@ -297,12 +295,13 @@ static void main_window_load(Window *window){
   
   int r = rand_lim(5);
   s_skull = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_SKULL);
-  s_skull_layer = bitmap_layer_create(GRect(PBL_IF_ROUND_ELSE(34,22),22,PBL_IF_ROUND_ELSE(34+73,22+73),22+83));
+  s_skull_layer = bitmap_layer_create(GRect(PBL_IF_ROUND_ELSE(34,22),22,PBL_IF_ROUND_ELSE(107,95),105));
   layer_set_hidden(bitmap_layer_get_layer(s_skull_layer),true);
   
-  s_digit_layer = bitmap_layer_create(GRect(64,30,64+36,30+56));
-  s_digit2_layer = bitmap_layer_create(GRect(40,30,40+36,30+56));
-  
+  s_digit_layer = bitmap_layer_create(GRect(64,30,100,86));
+  s_digit2_layer = bitmap_layer_create(GRect(40,30,76,86));
+  s_digit = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_ZERO);
+  s_digit2 = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_ZERO);
   s_digitzero = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_ZERO);
   s_digitone = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_ONE);
   s_digittwo = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_TWO);
@@ -345,20 +344,27 @@ static void main_window_load(Window *window){
 }
 
 static void main_window_unload(Window *window){
+ // gbitmap_destroy(s_digit);
+ // gbitmap_destroy(s_digit2);
+  gbitmap_destroy(s_digitone);
+  gbitmap_destroy(s_digittwo);
+  gbitmap_destroy(s_digitthree);
+  gbitmap_destroy(s_digitfour);
+  gbitmap_destroy(s_digitfive);
+  gbitmap_destroy(s_digitsix);
+  gbitmap_destroy(s_digitseven);
+  gbitmap_destroy(s_digiteight);
+  gbitmap_destroy(s_digitnine);
   bitmap_layer_destroy(s_digit_layer);
-  gbitmap_destroy(s_digit);
-  gbitmap_destroy(s_digit2);
   bitmap_layer_destroy(s_digit2_layer);
   gbitmap_destroy(s_skull);
   bitmap_layer_destroy(s_skull_layer);
   
   text_layer_destroy(s_time_layer);
   text_layer_destroy(s_group_layer);
-  text_layer_destroy(s_big_layer);
   //Unload GFont
   fonts_unload_custom_font(s_time_font);
   fonts_unload_custom_font(s_group_font);
-  fonts_unload_custom_font(s_big_font);
 }
 
 static void init() {
@@ -386,6 +392,8 @@ static void init() {
 
 static void deinit(){
   window_destroy(s_main_window);
+  tick_timer_service_unsubscribe();
+  accel_tap_service_unsubscribe();
 }
 
 int main(void){

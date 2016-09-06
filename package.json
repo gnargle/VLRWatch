@@ -11,6 +11,12 @@
         "resources": {
             "media": [
                 {
+                    "file": "images/zerored.png",
+                    "name": "IMAGE_ZERO_RED",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/nine.png",
                     "name": "IMAGE_NINE",
                     "targetPlatforms": null,
