@@ -84,12 +84,6 @@
                     "type": "bitmap"
                 },
                 {
-                    "file": "images/zerored.png",
-                    "name": "IMAGE_ZERO_RED",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
                     "file": "fonts/Digital7.ttf",
                     "name": "FONT_DIGITAL_32",
                     "targetPlatforms": null,
