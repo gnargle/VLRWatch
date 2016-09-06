@@ -1,0 +1,123 @@
+{
+    "author": "@AtheneAllen",
+    "dependencies": {},
+    "keywords": [],
+    "name": "vlr",
+    "pebble": {
+        "displayName": "Virtue's Last Reward",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/nine.png",
+                    "name": "IMAGE_NINE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/eight.png",
+                    "name": "IMAGE_EIGHT",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/seven.png",
+                    "name": "IMAGE_SEVEN",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/six.png",
+                    "name": "IMAGE_SIX",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/five.png",
+                    "name": "IMAGE_FIVE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/four.png",
+                    "name": "IMAGE_FOUR",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/three.png",
+                    "name": "IMAGE_THREE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/two.png",
+                    "name": "IMAGE_TWO",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/one.png",
+                    "name": "IMAGE_ONE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/zero.png",
+                    "name": "IMAGE_ZERO",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/skullicon.png",
+                    "menuIcon": true,
+                    "name": "IMAGE_SKULL_ICON",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/skull.png",
+                    "name": "IMAGE_SKULL",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/zerored.png",
+                    "name": "IMAGE_ZERO_RED",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "fonts/Digital7.ttf",
+                    "name": "FONT_DIGITAL_32",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/Pendule",
+                    "name": "FONT_PENDULE_ORNAMENTAL_47",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/Pendule",
+                    "name": "FONT_PENDULE_ORNAMENTAL_48",
+                    "targetPlatforms": null,
+                    "type": "font"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "basalt",
+            "chalk"
+        ],
+        "uuid": "54d08596-4f41-41e1-a274-086617d5ca97",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.0.0"
+}
